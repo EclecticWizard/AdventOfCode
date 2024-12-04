@@ -1,9 +1,16 @@
 defmodule CreateLists do
-  inputs = File.read("day1.txt")
-  IO.puts inputs
+  def run do
+    case File.read("day1.txt") do
+      {:ok, inputs} ->
+        normalised = String.replace(inputs, "   ", "\t")
+        IO.inspect(normalised)
+      {:error, reason} ->
+        IO.puts("Error reading file: #{reason}")
+    end
+  end
 end
 
-
+CreateLists.run
 
 
 ### Resources
