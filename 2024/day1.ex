@@ -55,7 +55,9 @@ defmodule DayOneP2 do
         # Once you have the total multiply the number in list1 by the number of
         # occurances in list2 and add these new values together to get a similarity
         # score
+        occurances = Enum.map(list1, fn loc1 -> Enum.map(list2, fn string2 -> if string1 == string2 end )
 
+        end)
 
       {:error, reason} ->
         IO.puts("Error reading file: #{reason}")
@@ -71,3 +73,4 @@ end
 # https://hexdocs.pm/elixir/Enum.html#zip/1
 # https://hexdocs.pm/elixir/Kernel.html#abs/1
 # https://hexdocs.pm/elixir/String.html#to_integer/1
+# https://hexdocs.pm/elixir/search.html?q=any%3F
